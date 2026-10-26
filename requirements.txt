@@ -1,0 +1,9 @@
+notebook
+ipykernel
+matplotlib
+numpy
+pytest
+nbconvert
+sympy
+scipy
+requests

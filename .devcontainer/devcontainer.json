@@ -1,0 +1,21 @@
+{
+  "name": "1T Python-oppgave",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  // Pakkene installeres før VS Code åpnes, så notebooken virker med en gang
+  "onCreateCommand": "pip install --user -r requirements.txt",
+  "waitFor": "onCreateCommand",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        // KI-autofullføring er slått av, så elevene skriver koden selv
+        "github.copilot.enable": { "*": false },
+        "editor.inlineSuggest.enabled": false,
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
+      }
+    }
+  }
+}
